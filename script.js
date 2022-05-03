@@ -61,3 +61,40 @@ const scrollUp = () => {
 }
 
 document.addEventListener('scroll', scrollUp)
+
+var correctDiabetes = 0;
+var correctAnxiety = 0;
+var correctCancer = 0;
+
+var submitAnswer = function (j) {
+
+	var radios = document.getElementsByName('choice' + j);
+	var val= "";
+	for (var i = 0, length = radios.length; i < length; i++) {
+		if (radios[i].checked) {
+		   val = radios[i].value; 
+		   break;
+		 }
+	}
+	
+	// let paragraphCorrectIncorrect = document.querySelector("#correctIncorrect")
+	var paragraphCorrectIncorrect = document.getElementById('correctIncorrect' + j);
+	
+	if (val == "") {
+		paragraphCorrectIncorrect.innerText = "Please select a valid answer.";
+	} else if ( val == "true" ) {
+		paragraphCorrectIncorrect.innerText = "Correct!";
+		if (j <= 7) {
+			correctDiabetes += 1;
+			document.getElementById('diabetesCorrect').innerHTML = correctDiabetes;
+		} else if (j > 7 && j <= 13) {
+			correctAnxiety += 1;
+			document.getElementById('anxietyCorrect').innerHTML = correctAnxiety;
+		} else {
+			correctCancer += 1;
+			document.getElementById('cancerCorrect').innerHTML = correctCancer;
+		}
+	} else {
+		paragraphCorrectIncorrect.innerText = "Incorrect. Please try again!";
+	}
+  };

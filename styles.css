@@ -20,10 +20,40 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Tahoma", sans-serif;
   line-height: 1.5;
   color: var(--clr-fg);
   background-color: var(--clr-bg);
+}
+
+.diabetes {
+  /* --clr-primary: #5fd0fd; */
+  --clr-primary: #b8e0ef;
+}
+
+.anxiety {
+  /* --clr-primary: #aaffd0; */
+  --clr-primary: #b7ddb4;
+}
+
+.cancer {
+  /* --clr-primary: #ff73b4; */
+  --clr-primary: #ead1ea;
+}
+
+#diabetes-box {
+  --box-color: #b8e0ef;
+  background-color: var(--box-color);
+}
+
+#anxiety-box {
+  --box-color: #b7ddb4;
+  background-color: var(--box-color);
+}
+
+#cancer-box {
+  --box-color: #ead1ea;
+  background-color: var(--box-color);
 }
 
 .light {
@@ -36,11 +66,12 @@ body {
 }
 
 .dark {
-  --clr-bg: #23283e;
-  --clr-bg-alt: #2a2f4c;
-  --clr-fg: #bdbddd;
-  --clr-fg-alt: #cdcdff;
-  --clr-primary: #90a0d9;
+  --clr-bg: #1d334b;
+  --clr-bg-alt: #2a5077;
+  --clr-fg: #b1c4e9;
+  --clr-fg-alt: #acc4e8;
+  --clr-primary: #9ab2cb;
+  --box-text-color: black;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -158,6 +189,8 @@ button {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  max-width: 93px;
+  margin-top: 15px;
 }
 
 .btn--outline:focus,
@@ -283,14 +316,13 @@ main {
 
 /* END PART 7 */
 
-.about__name {
+/* .about__name {
+  --clr-primary: #2b6f27;
   color: var(--clr-primary);
-  /* text-align: right; */
-}
+} */
 
 .about__role {
   margin-top: 1.2em;
-  /* text-align: right; */
 }
 
 .about__desc {
@@ -342,8 +374,13 @@ main {
   transform: translateY(-7px);
 }
 
+.need-to-be-black {
+  color: var(--box-text-color);
+}
+
 .project__description, .exp__description {
   margin-top: 1em;
+  color: var(--box-text-color);
 }
 
 .project__stack, .exp__stack {
@@ -456,4 +493,19 @@ main {
   .scroll-container {
     display: none;
   }
+}
+
+
+
+
+.diabetes {
+  background-image: "diabetes.png";
+}
+
+.anxiety {
+  background-image: "anxiety.png";
+}
+
+.cancer {
+  background-image: "cancer.png";
 }

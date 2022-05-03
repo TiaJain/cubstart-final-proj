@@ -9,225 +9,427 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
-  <!-- BEGIN PART 1 -->
   <link rel="stylesheet" href="styles.css">
-  <title>Tia Jain</title>
-  <!-- END PART 1 -->
+  <title>MediQuiz</title>
 </head>
 
 <body class="light" id="top">
   <header class="header center">
-    <!-- BEGIN PART 2 -->
-    <h3>
-      <a class="link" href="index.html">TJ</a>
-    </h3>
-    <!-- END PART 2 -->
     <nav class="nav center">
-      <ul class="nav__list center">
-        <li class="nav__list-item">
-          <a class="link link--nav" href="#projects">Projects</a>
-        </li>
-        <li class="nav__list-item">
-          <a class="link link--nav" href="#experience">Experience</a>
-        </li>
-        <li class="nav__list-item">
-          <a class="link link--nav" href="#skills">Skills</a>
-        </li>
-        <li class="nav__list-item">
-          <a class="link link--nav" href="#contact">Contact</a>
-        </li>
-      </ul>
-
-      <!-- BEGIN PART 5 -->
-
       <button type="button" aria-label="toggle theme" class="btn btn--icon">
         <i id="btn-theme" class="fas fa-moon"></i>
       </button>
 
-      <!-- 
-        5.1: What does this button tag correspond to on the site? 
-        This button tag corresponds to the button that changes the website between light and dark mode.
-      
-      -->
-
       <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
         <i class="fas fa-bars"></i>
       </button>
-
-      <!-- 
-        5.2: Try Ctrl-F in styles.css and look the class 'nav__hamburger'. You'll notice that it
-        appears in 2 places. Why is one of the rules 'display: none' on one instance? How do you
-        make it so that this button appears on screen? 
-        Hint: remember what @media (max-width: 600px) means.
-
-        One of the rules 'display: none' on one instance because we want to hide the 3 lines which symbolize a dropdown menu. 
-        We already have our options in our header and so there is no need to display an additional menu.
-        To make the button appear on the screen, comment out the line that says display: none
-       -->
-
-      <!-- END PART 5 -->
     </nav>
   </header>
 
   <main>
-    <div class="image-and-about">
-      <div class="profile-image">
-        <img src="me.jpg" width="400px" height="400px" style="border-radius: 50%;">
-      </div>
       <div class="about center">
-        <!-- BEGIN PART 6 -->
-        <h1>Hi, I'm <span class="about__name">Tia</span></h1>
-        <h2 class="about__role">Computer Science at UC Berkeley</h2>
-        <p class="about__desc">I'm interested in using technology for social good, especially in the healthcare space. I'm also interested in the intersection of business, design, and CS which I hope to explore more.</p>
-        <!-- END PART 6 -->
-        <div class="about__contact center">
-          <a href="https://docs.google.com/document/d/16p9FV20mlP-CgXRD2hTKw-rjlg5hyt6E1mUQMIZ0ORg/edit?usp=sharing">
-            <span class="btn btn--outline">Resume</span>
-          </a>
-  
-          <a href="https://github.com/TiaJain" aria-label="github" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-  
-          <a href="https://linkedin.com/in/tiajain" aria-label="linkedin" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
-          </a>
-        </div>
+        <h1>Welcome to <span class="about__name">MediQuiz</span></h1>
+        <p class="about__desc">We have created an educational trivia game with quizzes to spread information and create awareness about diabetes, anxiety/depression, and breast cancer -— 3 high-impact diseases in today's world.</p>
       </div>
-    </div>
     
     <section id="projects" class="section projects">
-      <h2 class="section__title">Projects</h2>
+      <h2 class="section__title">Quizzes</h2>
       <div class="projects__grid">
-        <!-- BEGIN PART 8 -->
-        <div class="project">
-          <h3>AI4Sight</h3>
-          <p class="project__description">
-            iOS app that leverages the power of machine learning to help the blind recognize their surroundings.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">Swift</li>
-            <li class="project__stack-item">ML</li>
-          </ul>
+        <a href="#diabetes">
+          <div class="project" id="diabetes-box">
+            <h3 class="need-to-be-black">Diabetes</h3>
+            <p class="project__description">
+              A health condition in which the body's ability to produce insulin is inhibited.
+            </p>
+          </div>
+        </a>
+        
+        <a href="#anxiety-depression">
+          <div class="project" id="anxiety-box">
+            <h3 class="need-to-be-black">Anxiety/Depression</h3>
+            <p class="project__description">
+              Characterized by a persistent feeling of sadness and a loss of interest.
+            </p>
+          </div>
+        </a>
 
-          <a href="https://github.com/TiaJain/AI4Sight" aria-label="source code" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <a href="https://ai4sight.org" aria-label="live preview" class="link link--icon">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-
-        <div class="project">
-          <h3>Gitlet</h3>
-          <p class="project__description">
-            Built the key components of the version control system git—including adding, committing, and merging.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">Java</li>
-          </ul>
-
-          <a href="https://github.com" aria-label="source code" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-        </div>
-
-        <div class="project">
-          <h3>Scheme Interpreter</h3>
-          <p class="project__description">
-            Developed an interpreter for a subset of the Scheme language. Utilized lexical & syntactic analysis as well as input parsing.
-          </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">Python</li>
-            <li class="project__stack-item">Scheme</li>
-          </ul>
-
-          <a href="https://github.com" aria-label="source code" class="link link--icon">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-        </div>
-        <!-- END PART 8 -->
+        <a href="#cancer">
+          <div class="project" id="cancer-box">
+            <h3 class="need-to-be-black">Breast Cancer</h3>
+            <p class="project__description">
+              A disease in which cells in the breast grow out of control.
+            </p>
+          </div>
+        </a>
       </div>
     </section>
 
-    <section id="experiences" class="section experience">
-      <h2 class="section__title">Experience</h2>
-      <div class="experience__grid">
-        <!-- BEGIN PART 8 -->
-        <div class="experience">
-          <h3>Bioinformatics Intern</h3>
-          <p class="exp__description">
-            Used machine learning to predict the genomic factors that influence the progression and varying severity of the autoimmune disease lupus.
-          </p>
-          <ul class="exp__stack">
-            <li class="exp__stack-item">R</li>
-            <li class="exp__stack-item">ML</li>
-            <li class="exp__stack-item">AWS</li>
-          </ul>
-
-          <a href="https://www.nature.com/articles/s42003-021-02000-9" aria-label="live preview" class="link link--icon">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
-          <a href="https://www.biorxiv.org/content/10.1101/2020.10.30.362715v1" aria-label="live preview" class="link link--icon">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
+    <section class="section diabetes" id="diabetes">
+      
+      <h2 class="section__title">Diabetes</h2>
+      
+      <div class="diabetes question">
+        <h3>How many people (in millions) does diabetes affect?</h3>
+        <br>
+        <form>
+          <input type="radio" name="choice0" value="false"> 20.6<br>
+          <input type="radio" name="choice0" value="false"> 34.2<br>
+          <input type="radio" name="choice0" value="true"> 27.9<br>
+          <input type="radio" name="choice0" value="false"> 45.1<br>
+        </form>
+        <div>
+          <span class="btn btn--outline" onclick="submitAnswer(0)">Submit</span>
         </div>
+        <p id="correctIncorrect0"> </p>
+        <br>
+      </div>
 
-        <div class="experience">
-          <h3>Academic Intern for CS61B (Data Structures)</h3>
-          <p class="exp__description">
-            Answered conceptual questions and helped students complete weekly labs for UC Berkeley's Data Structures course.
-          </p>
-          <ul class="exp__stack">
-            <li class="exp__stack-item">Java</li>
-          </ul>
+      <div class="diabetes question">
+        <h3>What parts of the world are most affected by diabetes?</h3>
+        <br>
+        <form>
+          <input type="checkbox" name="choice1" value="true"> China <br>
+          <input type="checkbox" name="choice1" value="true"> India <br>
+          <input type="checkbox" name="choice1" value="false"> Canada <br>
+          <input type="checkbox" name="choice1" value="true"> USA <br>
+        </form>
+        <div>
+          <span class="btn btn--outline" onclick="submitAnswer(1)">Submit</span>
         </div>
+        <p id="correctIncorrect1"> </p>
+        <br>
+      <div>
 
-        <div class="experience">
-          <h3>AI4ALL</h3>
-          <p class="exp__description">
-            Learned about the fundamentals of Artificial Intelligence with a policy and social justice-centered focus. Collaborated to train a machine learning model to distinguish Melanoma from 7 other skin diseases (>80% accuracy)
-
-          </p>
-          <ul class="exp__stack">
-            <li class="exp__stack-item">Python</li>
-            <li class="exp__stack-item">AI</li>
-          </ul>
+      <div class="diabetes question">
+        <h3>Select possible cures to miitgate the effects of diabetes.</h3>
+        <br>
+        <form>
+          <input type="radio" name="choice2" value="false"> Incorporate some movement and physical activity everyday. <br>
+          <input type="radio" name="choice2" value="false"> Eat healthy, plant-based food. <br>
+          <input type="radio" name="choice2" value="false"> Manage blood sugar levels. <br>
+          <input type="radio" name="choice2" value="true"> All of the above. <br>
+        </form>
+        <div>
+          <span class="btn btn--outline" onclick="submitAnswer(2)">Submit</span>
         </div>
-        <!-- END PART 8 -->
+        <p id="correctIncorrect2"> </p>
+        <br>
+      <div>
+
+      <div class="diabetes question">
+        <h3>Select True or False: Middle-aged and older adults are still at the highest risk for developing type 2 diabetes.
+        </h3>
+        <br>
+        <form>
+          <input type="radio" name="choice3" value="true"> True <br>
+          <input type="radio" name="choice3" value="false"> False <br>
+        </form>
+        <div>
+          <span class="btn btn--outline" onclick="submitAnswer(3)">Submit</span>
+        </div>
+        <p id="correctIncorrect3"> </p>
+        <br>
+      <div>
+
+      <div class="diabetes question">
+        <h3>How many types of diabetes are there?</h3>
+        <br>
+        <form>
+          <input type="radio" name="choice4" value="false"> 1 <br>
+          <input type="radio" name="choice4" value="false"> 2 <br>
+          <input type="radio" name="choice4" value="true"> 3 <br>
+          <input type="radio" name="choice4" value="false"> 4 <br>
+        </form>
+        <div>
+          <span class="btn btn--outline" onclick="submitAnswer(4)">Submit</span>
+        </div>
+        <p id="correctIncorrect4"> </p>
+        <br>
+      <div>
+
+      <div class="diabetes question">
+        <h3>Select all the true statements below.</h3>
+        <br>
+        <form>
+          <input type="checkbox" name="choice5" value="false"> 1.4 million Americans are diagnosed with diabetes every year. <br>
+          <input type="checkbox" name="choice5" value="false"> 37.3 million people have diabetes (11.3% of the US population <br>
+          <input type="checkbox" name="choice5" value="true"> Close to 0.5 million people are blind due to diabetes <br>
+          <input type="checkbox" name="choice5" value="false"> 96 million American adults—more than 1 in 3—have prediabetes, more than 8 in 10 adults with prediabetes don’t know they have it. <br>
+        </form>
+        <div>
+          <span class="btn btn--outline" onclick="submitAnswer(5)">Submit</span>
+        </div>
+        <p id="correctIncorrect5"> </p>
+        <br>
+      <div>
+        
+      <div class="diabetes question">
+        <h3>What body organs can be affected in the long-term by diabetes?</h3>
+        <br>
+        <form>
+          <input type="checkbox" name="choice6" value="true"> Brain <br>
+          <input type="checkbox" name="choice6" value="false"> Eyes <br>
+          <input type="checkbox" name="choice6" value="false"> Heart <br>
+          <input type="checkbox" name="choice6" value="false"> Nerves <br>
+        </form>
+        <div>
+          <span class="btn btn--outline" onclick="submitAnswer(6)">Submit</span>
+        </div>
+        <p id="correctIncorrect6"> </p>
+        <br>
+      <div>
+
+      <div class="diabetes question">
+        <h3>Can diabetes be inherited?</h3>
+        <br>
+        <form>
+          <input type="radio" name="choice7" value="true"> Yes <br>
+          <input type="radio" name="choice7" value="false"> No <br>
+        </form>
+        <div>
+          <span class="btn btn--outline" onclick="submitAnswer(7)">Submit</span>
+        </div>
+        <p id="correctIncorrect7"> </p>
+        <br>
+      <div>
+
+      <div>
+        <h3>Answers Correct (Diabetes):</h3>
+        <h3 id="diabetesCorrect">0</h3>
+      </div>
+    <section>
+    
+
+      <!-- map diabetes -->
+      
+  
+    <section class="section anxiety-depression" id="anxiety-depression">
+      <h2 class="section__title">Anxiety and Depression</h2>
+      <div class="anxiety question">
+        <h3>What are some common risk factors of anxiety and depression?
+        </h3>
+        <br>
+        <form>
+          <input type="radio" name="choice8" value="false"> Trauma <br>
+          <input type="radio" name="choice8" value="false"> Stress <br>
+          <input type="radio" name="choice8" value="false"> Substance abuse <br>
+          <input type="radio" name="choice8" value="false"> Family history <br>
+          <input type="radio" name="choice8" value="true"> All of the Above <br>
+        </form>
+        <div>
+          <span class="btn btn--outline" onclick="submitAnswer(8)">Submit</span>
+        </div>
+        <p id="correctIncorrect8"> </p>
+        <br>
+      <div>
+
+      <div class="anxiety question">
+          <h3>What percent of adolescents suffer from anxiety and depression?
+          </h3>
+          <br>
+          <form>
+            <input type="radio" name="choice9" value="true"> 20% <br>
+            <input type="radio" name="choice9" value="false"> 30% <br>
+            <input type="radio" name="choice9" value="false"> 40% <br>
+            <input type="radio" name="choice9" value="false"> 50% <br>
+          </form>
+          <div>
+            <span class="btn btn--outline" onclick="submitAnswer(9)">Submit</span>
+          </div>
+          <p id="correctIncorrect9"> </p>
+          <br>
+        <div>
+       
+        <div class="anxiety question">
+          <h3>What percentage of adolescents are being treated for anxiety and depression?</h3>
+          <br>
+          <form>
+            <input type="radio" name="choice10" value="false"> 20% <br>
+            <input type="radio" name="choice10" value="true"> 30% <br>
+            <input type="radio" name="choice10" value="false"> 40% <br>
+            <input type="radio" name="choice10" value="false"> 50% <br>
+          </form>
+          <div>
+            <span class="btn btn--outline" onclick="submitAnswer(10)">Submit</span>
+          </div>
+          <p id="correctIncorrect10"> </p>
+          <br>
+        <div>
+
+        <div class="anxiety question">
+          <h3>Which of these statements about anxiety are false?</h3>
+          <br>
+          <form>
+            <input type="checkbox" name="choice11" value="false"> Generalized anxiety may begin in childhood.<br>
+            <input type="checkbox" name="choice11" value="true"> Women and men are equally likely to be diagnosed with an anxiety disorder.<br>
+            <input type="checkbox" name="choice11" value="true"> Anxiety cannot cause physical changes in the body.<br>
+          </form>
+          <div>
+            <span class="btn btn--outline" onclick="submitAnswer(11)">Submit</span>
+          </div>
+          <p id="correctIncorrect11"> </p>
+          <br>
+        <div>
+
+        <div class="anxiety question">
+          <h3>What is NOT a way to prevent or treat anxiety?
+          </h3>
+          <br>
+          <form>
+            <input type="checkbox" name="choice12" value="false"> Exercise<br>
+            <input type="checkbox" name="choice12" value="true"> Consistent stress<br>
+            <input type="checkbox" name="choice12" value="false"> Medication<br>
+            <input type="checkbox" name="choice12" value="false"> Therapy<br>
+          </form>
+          <div>
+            <span class="btn btn--outline" onclick="submitAnswer(12)">Submit</span>
+          </div>
+          <p id="correctIncorrect12"> </p>
+          <br>
+        <div>
+        
+        <div class="anxiety question">
+          <h3>In which countries is clinically diagnosed depression most prevalent?
+          </h3>
+          <br>
+          <form>
+            <input type="checkbox" name="choice13" value="true"> USA<br>
+            <input type="checkbox" name="choice13" value="false"> Australia<br>
+            <input type="checkbox" name="choice13" value="true"> Russia<br>
+            <input type="checkbox" name="choice13" value="true"> East Asia<br>
+          </form>
+          <div>
+            <span class="btn btn--outline" onclick="submitAnswer(13)">Submit</span>
+          </div>
+          <p id="correctIncorrect13"> </p>
+          <br>
+        <div>
+
+        <div>
+          <h3>Answers Correct (Anxiety and Depression):</h3>
+          <h3 id="anxietyCorrect">0</h3>
+        </div>
+      </section>
+    
+
+    <section class = "section cancer" id = "cancer"> 
+    <h2 class="section__title">Breast Cancer</h2>
+      <div class="cancer-question">
+        <h3>Select all the ways in which you can lower your breast cancer risk (that are in your control):</h3><br>
+        <form>
+          <input type="checkbox" name="choice14" value="false"> Getting older <br>
+          <input type="checkbox" name="choice14" value="false"> Having a family history of breast cancer <br>
+          <input type="checkbox" name="choice14" value="true"> Exercising more <br>
+          <input type="checkbox" name="choice14" value="true"> Eating healthier (especially if you’re overweight or obese) <br>
+          <input type="checkbox" name="choice14" value="true"> Maintaining a healthy weight <br>
+          <input type="checkbox" name="choice14" value="false"> Limiting or eliminating alcohol <br>
+        </form>
+        <div>
+          <span class="btn btn--outline" onclick="submitAnswer(14)">Submit</span>
+        </div>
+        <p id="correctIncorrect14"> </p>
+        <br>
+      </div>
+
+      <div class="cancer-question">
+        <h3>True or False: Surgery and needle biopsies can cause breast cancer to spread. </h3><br>
+        <form>
+          <input type="radio" name="choice15" value="false"> True <br>
+          <input type="radio" name="choice15" value="true"> False <br>
+        </form>
+        <div>
+          <span class="btn btn--outline" onclick="submitAnswer(15)">Submit</span>
+        </div>
+        <p id="correctIncorrect15"> </p>
+        <br>
+      </div>
+
+      <div class="cancer-question">
+        <h3>True or False: Men can get breast cancer.</h3><br>
+        <form>
+          <input type="radio" name="choice16" value="true"> True <br>
+          <input type="radio" name="choice16" value="false"> False <br>
+        </form>
+        <div>
+          <span class="btn btn--outline" onclick="submitAnswer(16)">Submit</span>
+        </div>
+        <p id="correctIncorrect16"> </p>
+        <br>
+      </div>
+      
+      <div class="cancer-question">
+        <h3>How much higher are a woman’s chances of developing breast cancer if her mother, a sister, or daughter had it?</h3><br>
+        <form>
+          <input type="radio" name="choice17" value="true"> 2 times <br>
+          <input type="radio" name="choice17" value="false"> 3 times <br>
+          <input type="radio" name="choice17" value="false"> 4 times <br>
+          <input type="radio" name="choice17" value="false"> 5 times <br>
+        </form>
+        <div>
+          <span class="btn btn--outline" onclick="submitAnswer(17)">Submit</span>
+        </div>
+        <p id="correctIncorrect17"> </p>
+        <br>
+      </div>
+      
+      <div class="cancer-question">
+        <h3>About how many U.S. women will develop invasive breast cancer over the course of her lifetime.</h3><br>
+        <form>
+          <input type="radio" name="choice18" value="false"> 1 in 4 <br>
+          <input type="radio" name="choice18" value="false"> 1 in 6 <br>
+          <input type="radio" name="choice18" value="true"> 1 in 8 <br>
+          <input type="radio" name="choice18" value="false"> 1 in 10 <br>
+        </form>
+        <div>
+          <span class="btn btn--outline" onclick="submitAnswer(18)">Submit</span>
+        </div>
+        <p id="correctIncorrect18"> </p>
+        <br>
+      </div>
+
+      <div>
+        <h3>Answers Correct (Breast Cancer):</h3>
+        <h3 id="cancerCorrect">0</h3>
       </div>
     </section>
 
+    <section id="projects" class="section projects">
+      <h2 class="section__title">Resources</h2>
+      <div class="projects__grid">
+        <a href="https://www.diabetes.org/healthylivingnews?gclid=CjwKCAjwgr6TBhAGEiwA3aVuIUeY_JDP0IngO12tKyl_mtMqSIn9OeQ_HgLWIrkp4GuFDUPAoCqs0BoCqmoQAvD_BwE">
+          <div class="project" id="diabetes-box">
+            <h3 class="need-to-be-black">Diabetes</h3>
+            <p class="project__description">
+              American Diabetes Assocation newsletter
+            </p>
+          </div>
+        </a>
+        
+        <a href="https://www.samhsa.gov/find-help/national-helpline">
+          <div class="project" id="anxiety-box">
+            <h3 class="need-to-be-black">Anxiety/Depression</h3>
+            <p class="project__description">
+              National helpline and additional resources
+            </p>
+          </div>
+        </a>
 
-
-
-    <section class="section skills" id="skills">
-      <!-- BEGIN PART 10 -->
-      <h2 class="section__title">Skills</h2>
-      <ul class="skills__list">
-        <li class="skills__list-item btn btn--plain">Python</li>
-        <li class="skills__list-item btn btn--plain">Java</li>
-        <li class="skills__list-item btn btn--plain">Software Engineering</li>
-        <li class="skills__list-item btn btn--plain">Data Structures</li>
-        <li class="skills__list-item btn btn--plain">Algorithms</li>
-        <li class="skills__list-item btn btn--plain">Web Design</li>
-      </ul>
-      <!-- END PART 10 -->
-    </section>
-    <section class="section contact center" id="contact">
-      <h2 class="section__title">Contact</h2>
-      <a href="mailto:tiasjain@gmail.com">
-        <span class="btn btn--outline">Email me</span>
-      </a>
+        <a href="https://www.cancercare.org/diagnosis/breast_cancer">
+          <div class="project" id="cancer-box">
+            <h3 class="need-to-be-black">Breast Cancer</h3>
+            <p class="project__description">
+              Free professional support services (counseling, support groups)
+            </p>
+          </div>
+        </a>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <!-- BEGIN PART 12 -->
     <a href="/" class="link footer__link">
-      Created with ❤️ By Tia Jain
+      Created with ❤️ By Tia, Ashna, and Janani
     </a>
-    <!-- END PART 12 -->
   </footer>
 
 
